@@ -32,6 +32,7 @@
   "devDependencies": {
     "eslint": "^4.15.0",
     "eslint-plugin-react": "^7.5.1",
+    "fs-extra": "^5.0.0",
     "gh-pages": "^1.1.0",
     "prettier": "^1.10.2"
   },
@@ -53,6 +54,7 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
+    "import": "./node_modules/babel-cli/bin/babel-node.js src/batch/import_post_files.js"
   }
 }
